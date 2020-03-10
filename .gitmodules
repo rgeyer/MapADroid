@@ -1,0 +1,6 @@
+[submodule "src/eagle/libraries/nodemcudevkit"]
+	path = src/eagle/libraries/nodemcudevkit
+	url = https://github.com/nodemcu/nodemcu-devkit-v1.0
+[submodule "src/eagle/libraries/sparkfunlvlshft"]
+	path = src/eagle/libraries/sparkfunlvlshft
+	url = https://github.com/sparkfun/Logic_Level_Bidirectional
