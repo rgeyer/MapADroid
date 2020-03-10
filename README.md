@@ -1,3 +1,10 @@
+# Description
+This is a repository for all of resources that were used to build our local communities Pokemon scanner.
+
+Primarily, this is the Map-A-Droid software, with some minor modifications, a docker compose file for our specific setup, and finally a 3d printed, rack mountable case for holding 16 of the Android TV boxes that are required for scanning.
+
+This is an initial commit of VERY rough notes and resources, expect it to get more refined over time.
+
 # BOM
 
 |Qty|Item|Link|Cost Per|Total|Bulk Total|
@@ -22,6 +29,8 @@
 ||Totals|||$663.11|$741.84|
 
 # 3D Printed Parts
+
+STLs in the `resources/ATVRackSTLs` directory.
 
 Design 1, before optimization
 
