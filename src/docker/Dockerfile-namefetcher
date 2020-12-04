@@ -1,0 +1,8 @@
+FROM node:14
+
+RUN npm install axios mysql2 && \
+    mkdir /app
+
+COPY ./name_fetcher.js /app/name_fetcher.js
+
+ENTRYPOINT ["node", "/app/name_fetcher.js"]
