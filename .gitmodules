@@ -4,3 +4,6 @@
 [submodule "src/eagle/libraries/sparkfunlvlshft"]
 	path = src/eagle/libraries/sparkfunlvlshft
 	url = https://github.com/sparkfun/Logic_Level_Bidirectional
+[submodule "src/tasmota"]
+	path = src/tasmota
+	url = git@github.com:rgeyer/Tasmota.git
