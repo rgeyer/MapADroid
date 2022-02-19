@@ -30,16 +30,31 @@ if __name__ == "__main__":
 
     idx = 0
     for (name, fence_type, fence_data) in cursor:
-        fences.append({
-            "name": name,
-            "color": "#FFFFFF",
-            "id": idx,
-            "path": [
-                [float(ll[0]), float(ll[1])]
-                for ll in [p.split(',') for p in json.loads(fence_data) if p]
-                ]
-            })
-        idx += 1
+        subname = "Unknown"
+        path = []
+        for coord_or_name in json.loads(fence_data):
+            ll = coord_or_name.split(',')
+            if len(ll) == 1:
+                if path:
+                    fences.append({
+                        "name": subname,
+                        "color": "#FFFFFF",
+                        "id": idx,
+                        "path": path,
+                    })
+                    path = []
+                    idx += 1
+                subname = ll[0]                
+            else:
+                path.append([float(ll[0]), float(ll[1])])
+        if subname == "Unknown" and path:
+            fences.append({
+                "name": name,
+                "color": "#FFFFFF",
+                "id": idx,
+                "path": path,
+                })
+            idx += 1
 
     print(json.dumps(fences, indent=2))
     cnx.close()
