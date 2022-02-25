@@ -1,1 +1,2 @@
-mysqlclient
+mysql-connector-python
+simplekml
